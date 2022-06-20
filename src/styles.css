@@ -1,0 +1,13 @@
+.container {
+  background: linear-gradient(
+    to top,
+    rgb(161, 140, 209) 0%,
+    rgb(251, 194, 235) 100%
+  );
+}
+
+.card-body {
+  background: rgba(255, 255, 255, 0.389);
+  border-radius: 4px;
+  box-shadow: #0000005a 2px 2px 3px;
+}

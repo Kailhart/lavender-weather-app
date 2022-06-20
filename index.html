@@ -6,15 +6,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather</title>
     <!-- CSS only -->
+    <link rel="stylesheet" href="src/styles.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="src/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/4b1814b539.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
+    <div class="container row">
+      <form class="d-flex col-12" role="search">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <button class="btn btn-outline-secondary" type="submit">Search</button>
+        <button class="btn btn-outline-secondary">
+          <i class="fa-solid fa-location-dot"></i>
+        </button>
+      </form>
+      <div class="card-body col-12 row">
+        <div class="col-12">Los Angeles</div>
+        <div class="col-4">
+          19°C|F <br />
+          Cloudy <br />
+          Humidity: 20% <br />
+          Wind: 5 m/s
+        </div>
+        <div class="col-5"><i class="fa-solid fa-cloud"></i></div>
+        <div class="text-muted col-3">
+          Thursday 20/06
+          <br />
+          10:45
+        </div>
+      </div>
+
+      <div class="card-group row">
+        <div class="card-body col-sm-auto">
+          <i class="fa-solid fa-cloud"></i>
+          <br />
+          Friday <br />
+          21 June <br />
+          +22/+15
+        </div>
+        <div class="card-body col-sm-auto">
+          <i class="fa-solid fa-cloud"></i>
+          <br />
+          Friday <br />
+          21 June <br />
+          +22/+15
+        </div>
+        <div class="card-body col-sm-auto">
+          <i class="fa-solid fa-cloud"></i>
+          <br />
+          Friday <br />
+          21 June <br />
+          +22/+15
+        </div>
+        <div class="card-body col-sm-auto">
+          <i class="fa-solid fa-cloud"></i>
+          <br />
+          Friday <br />
+          21 June <br />
+          +22/+15
+        </div>
+        <div class="card-body col-sm-auto">
+          <i class="fa-solid fa-cloud"></i>
+          <br />
+          Friday <br />
+          21 June <br />
+          +22/+15
+        </div>
+      </div>
+    </div>
     <script src="src/scrypt.js"></script>
   </body>
 </html>
