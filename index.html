@@ -6,7 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather</title>
     <!-- CSS only -->
-    <link rel="stylesheet" href="src/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -17,73 +22,103 @@
       src="https://kit.fontawesome.com/4b1814b539.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="src/styles.css" />
   </head>
   <body>
-    <div class="container row">
-      <form class="d-flex col-12" role="search">
-        <input
-          class="form-control me-2"
-          type="search"
-          placeholder="Search"
-          aria-label="Search"
-        />
-        <button class="btn btn-outline-secondary" type="submit">Search</button>
-        <button class="btn btn-outline-secondary">
-          <i class="fa-solid fa-location-dot"></i>
-        </button>
-      </form>
-      <div class="card-body col-12 row">
-        <div class="col-12">Los Angeles</div>
-        <div class="col-4">
-          19°C|F <br />
-          Cloudy <br />
-          Humidity: 20% <br />
-          Wind: 5 m/s
+    <div class="container">
+      <div class="weather-app row">
+        <form class="d-flex col-12 search-form" role="search">
+          <input
+            class="form-control"
+            type="search"
+            placeholder="Search..."
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-secondary" type="submit">
+            Search
+          </button>
+          <button class="btn btn-outline-secondary">
+            <i class="fa-solid fa-location-dot"></i>
+          </button>
+        </form>
+
+        <div class="card-body col-12 row">
+          <div class="col-4">
+            <div class="degrees-line">
+              <span id="current-degrees">19</span>°C
+            </div>
+            <span id="current-weather-description">Cloudy</span> <br />
+            Humidity: <span id="humidity">20</span>% <br />
+            Wind: <span id="wind">5</span> m/s
+          </div>
+
+          <div class="col-8 row right-card-part">
+            <div class="col-12" id="city-name">Los Angeles</div>
+
+            <div class="col-5 weather-icon" id="current-icon">
+              <i class="fa-solid fa-cloud"></i>
+            </div>
+
+            <div class="current-time col-7">
+              <span id="current-week-day">Thursday</span>
+              <span id="current-date">20</span>/
+              <span id="current-month">06</span>
+              <br />
+              10:45
+            </div>
+          </div>
         </div>
-        <div class="col-5"><i class="fa-solid fa-cloud"></i></div>
-        <div class="text-muted col-3">
-          Thursday 20/06
-          <br />
-          10:45
+
+        <div class="card-group">
+          <div class="card-body weather-card">
+            <div class="weather-icon">
+              <i class="fa-solid fa-cloud"></i>
+            </div>
+            Friday <br />
+            21 June <br />
+            +22/+15
+          </div>
+          <div class="card-body weather-card">
+            <div class="weather-icon">
+              <i class="fa-solid fa-cloud"></i>
+            </div>
+            Friday <br />
+            21 June <br />
+            +22/+15
+          </div>
+          <div class="card-body weather-card">
+            <div class="weather-icon">
+              <i class="fa-solid fa-cloud"></i>
+            </div>
+            Friday <br />
+            21 June <br />
+            +22/+15
+          </div>
+          <div class="card-body weather-card">
+            <div class="weather-icon">
+              <i class="fa-solid fa-cloud"></i>
+            </div>
+            Friday <br />
+            21 June <br />
+            +22/+15
+          </div>
+          <div class="card-body weather-card">
+            <div class="weather-icon">
+              <i class="fa-solid fa-cloud"></i>
+            </div>
+            Friday <br />
+            21 June <br />
+            +22/+15
+          </div>
         </div>
       </div>
-
-      <div class="card-group row">
-        <div class="card-body col-sm-auto">
-          <i class="fa-solid fa-cloud"></i>
-          <br />
-          Friday <br />
-          21 June <br />
-          +22/+15
-        </div>
-        <div class="card-body col-sm-auto">
-          <i class="fa-solid fa-cloud"></i>
-          <br />
-          Friday <br />
-          21 June <br />
-          +22/+15
-        </div>
-        <div class="card-body col-sm-auto">
-          <i class="fa-solid fa-cloud"></i>
-          <br />
-          Friday <br />
-          21 June <br />
-          +22/+15
-        </div>
-        <div class="card-body col-sm-auto">
-          <i class="fa-solid fa-cloud"></i>
-          <br />
-          Friday <br />
-          21 June <br />
-          +22/+15
-        </div>
-        <div class="card-body col-sm-auto">
-          <i class="fa-solid fa-cloud"></i>
-          <br />
-          Friday <br />
-          21 June <br />
-          +22/+15
-        </div>
+      <div id="link-line">
+        <a
+          href="http://github.com/Kailhart/lavender-weather-app"
+          id="github-link"
+          >Open-sourced</a
+        >
+        by Kailhart
       </div>
     </div>
     <script src="src/scrypt.js"></script>
