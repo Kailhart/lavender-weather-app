@@ -18,10 +18,10 @@
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
-    <script
-      src="https://kit.fontawesome.com/4b1814b539.js"
-      crossorigin="anonymous"
-    ></script>
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
     <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet" />
     <link rel="stylesheet" href="src/styles.css" />
   </head>
@@ -35,80 +35,119 @@
             placeholder="Search..."
             aria-label="Search"
           />
-          <button class="btn btn-outline-secondary" type="submit">
+
+          <button
+            class="btn btn-outline-secondary"
+            type="submit"
+            id="search-button"
+          >
             Search
           </button>
-          <button class="btn btn-outline-secondary">
-            <i class="fa-solid fa-location-dot"></i>
+
+          <button class="btn btn-outline-secondary" id="location-button">
+            <i class="uil uil-location-point"></i>
           </button>
         </form>
 
-        <div class="card-body col-12 row">
+        <div class="card-body col-12 row p-3">
+          <div id="city-name">Los Angeles</div>
+
           <div class="col-4">
             <div class="degrees-line">
               <span id="current-degrees">19</span>°C
             </div>
-            <span id="current-weather-description">Cloudy</span> <br />
-            Humidity: <span id="humidity">20</span>% <br />
-            Wind: <span id="wind">5</span> m/s
+            <div class="current-weather-info">
+              Humidity: <span id="humidity">20</span>% <br />
+              Wind: <span id="wind">5</span> m/s
+            </div>
           </div>
 
-          <div class="col-2 weather-icon" id="current-icon">
+          <div class="col-3 weather-icon" id="current-icon">
             <i class="lni lni-sun"></i>
           </div>
 
-          <div class="col-6 right-card-part">
-            <div id="city-name">Los Angeles</div>
-            <div class="current-time">
-              <span id="hours">10</span>:<span id="minutes">45</span>
-              <br />
-              <span id="current-week-day">Thursday</span>
-              <span id="current-date">20</span>/
-              <span id="current-month">06</span>
-            </div>
+          <div class="current-time p-2 col-5">
+            <span id="current-week-day">Wed</span>
+            <span id="hours">10</span>:<span id="minutes">45</span>,
+            <span id="current-weather-description">cloudy</span>
           </div>
         </div>
 
-        <div class="card-group">
+        <div class="card-group col-12">
           <div class="card-body weather-card">
-            <div class="weather-icon">
+            <div class="weather-icon" id="weather-icon-one">
               <i class="lni lni-sun"></i>
             </div>
-            Friday <br />
-            21 June <br />
-            +22/+15
+            <div class="week-day"><span id="week-day-one">Fri</span>,</div>
+            <div class="forecast-date">
+              <span id="date-one">21</span> <span id="month-one"> June</span>
+            </div>
+            <div class="forecast-degrees">
+              <span id="max-temp-one">+22</span>
+              <hr />
+              <span id="min-temp-one">+15</span>
+            </div>
           </div>
+
           <div class="card-body weather-card">
-            <div class="weather-icon">
+            <div class="weather-icon" id="weather-icon-two">
               <i class="lni lni-sun"></i>
             </div>
-            Friday <br />
-            21 June <br />
-            +22/+15
+            <div class="week-day"><span id="week-day-two">Fri</span>,</div>
+            <div class="forecast-date">
+              <span id="date-two">21</span> <span id="month-two"> June</span>
+            </div>
+            <div class="forecast-degrees">
+              <span id="max-temp-two">+22</span>
+              <hr />
+              <span id="min-temp-two">+15</span>
+            </div>
           </div>
+
           <div class="card-body weather-card">
-            <div class="weather-icon">
+            <div class="weather-icon" id="weather-icon-three">
               <i class="lni lni-sun"></i>
             </div>
-            Friday <br />
-            21 June <br />
-            +22/+15
+            <div class="week-day"><span id="week-day-three">Fri</span>,</div>
+            <div class="forecast-date">
+              <span id="date-three">21</span>
+              <span id="month-three"> June</span>
+            </div>
+            <div class="forecast-degrees">
+              <span id="max-temp-three">+22</span>
+              <hr />
+              <span id="min-temp-three">+15</span>
+            </div>
           </div>
+
           <div class="card-body weather-card">
-            <div class="weather-icon">
+            <div class="weather-icon" id="weather-icon-four">
               <i class="lni lni-sun"></i>
             </div>
-            Friday <br />
-            21 June <br />
-            +22/+15
+            <div class="week-day"><span id="week-day-four">Fri</span>,</div>
+            <div class="forecast-date">
+              <span id="date-four">21</span> <span id="month-four"> June</span>
+            </div>
+            <div class="forecast-degrees">
+              <span id="max-temp-four">+22</span>
+              <hr />
+              <span id="min-temp-four">+15</span>
+            </div>
           </div>
+
           <div class="card-body weather-card">
-            <div class="weather-icon">
+            <div class="weather-icon" id="weather-icon-five">
               <i class="lni lni-sun"></i>
             </div>
-            Friday <br />
-            21 June <br />
-            +22/+15
+            <div class="week-day"><span id="week-day-five">Fri</span>,</div>
+            <div class="forecast-date">
+              <span id="date-five">21</span> <span id="month-five"> June</span>
+            </div>
+            <div class="forecast-degrees">
+              <span id="max-temp-five">+22</span>
+              <hr />
+              <span id="min-temp-five">+15</span>
+            </div>
           </div>
         </div>
       </div>

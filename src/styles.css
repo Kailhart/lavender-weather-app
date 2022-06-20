@@ -6,6 +6,7 @@
   border-radius: 0.375rem;
   padding: 10px;
   margin-top: 10px;
+  line-height: 28px;
 }
 
 .card-body {
@@ -27,7 +28,7 @@
 
 .weather-icon {
   color: white;
-  font-size: 50px;
+  font-size: 60px;
 }
 
 .search-form {
@@ -47,9 +48,11 @@
 .degrees-line {
   color: white;
   font-size: 40px;
+  padding-top: 20px;
 }
 
-.right-card-part {
+.current-weather-info {
+  margin-top: 5px;
   padding: 0;
 }
 
@@ -57,15 +60,41 @@
   text-align: right;
 }
 
-#current-icon {
-  font-size: 90px;
-  text-align: right;
+.week-day {
+  font-size: 25px;
+  margin-top: 10px;
+}
+
+.forecast-date {
+  margin-bottom: 10px;
+}
+
+.forecast-degrees {
+  color: white;
+  font-size: 25px;
+}
+
+hr {
+  margin: 2px;
+  border-top: #726992 solid 3px;
+}
+
+#location-button {
+  padding: 0px 4px;
+  font-size: 30px;
 }
 
 #city-name {
   color: white;
   text-align: right;
-  font-size: 35px;
+  font-size: 45px;
+}
+
+#current-icon {
+  padding: 0;
+  padding-top: 20px;
+  font-size: 90px;
+  text-align: left;
 }
 
 #link-line {
