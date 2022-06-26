@@ -24,140 +24,148 @@
     />
     <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet" />
     <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
   <body>
     <div class="container">
-      <div class="weather-app row">
-        <form class="d-flex col-12 search-form" role="search">
-          <input
-            class="form-control"
-            type="search"
-            placeholder="Search..."
-            aria-label="Search"
-          />
+      <div class="weather-app-content">
+        <div class="weather-app row">
+          <form class="d-flex col-12 search-form" role="search">
+            <input
+              class="form-control"
+              type="search"
+              placeholder="Search..."
+              aria-label="Search"
+            />
 
-          <button
-            class="btn btn-outline-secondary"
-            type="submit"
-            id="search-button"
+            <button
+              class="btn btn-outline-secondary"
+              type="submit"
+              id="search-button"
+            >
+              Search
+            </button>
+
+            <button class="btn btn-outline-secondary" id="location-button">
+              <i class="uil uil-location-point"></i>
+            </button>
+          </form>
+
+          <div class="card-body col-12 row">
+            <div class="col-3 weather-icon" id="current-icon">
+              <i class="lni lni-sun"></i>
+            </div>
+
+            <div class="col-9 row gx-0">
+              <div class="col-12" id="city-name">Kyiv</div>
+
+              <div class="col-5">
+                <div class="degrees-line">
+                  <span id="current-degrees"></span>°C
+                </div>
+              </div>
+
+              <div class="current-time-description col-7">
+                <span id="current-week-day">Wednesday</span>
+                <span id="hours">10</span>:<span id="minutes">45</span>
+                <div id="current-weather-description"></div>
+              </div>
+
+              <div class="current-weather-info col-12">
+                Humidity: <span id="humidity"></span>% <br />
+                Wind: <span id="wind"></span> m/s
+              </div>
+            </div>
+          </div>
+
+          <div class="card-group col-12">
+            <div class="card-body weather-card">
+              <div class="weather-icon" id="weather-icon-one">
+                <i class="lni lni-sun"></i>
+              </div>
+              <div class="week-day"><span id="week-day-one">Fri</span>,</div>
+              <div class="forecast-date">
+                <span id="date-one">21</span> <span id="month-one"> June</span>
+              </div>
+              <div class="forecast-degrees">
+                <span id="max-temp-one">+22</span>
+                <hr />
+                <span id="min-temp-one">+15</span>
+              </div>
+            </div>
+
+            <div class="card-body weather-card">
+              <div class="weather-icon" id="weather-icon-two">
+                <i class="lni lni-sun"></i>
+              </div>
+              <div class="week-day"><span id="week-day-two">Fri</span>,</div>
+              <div class="forecast-date">
+                <span id="date-two">21</span> <span id="month-two"> June</span>
+              </div>
+              <div class="forecast-degrees">
+                <span id="max-temp-two">+22</span>
+                <hr />
+                <span id="min-temp-two">+15</span>
+              </div>
+            </div>
+
+            <div class="card-body weather-card">
+              <div class="weather-icon" id="weather-icon-three">
+                <i class="lni lni-sun"></i>
+              </div>
+              <div class="week-day"><span id="week-day-three">Fri</span>,</div>
+              <div class="forecast-date">
+                <span id="date-three">21</span>
+                <span id="month-three"> June</span>
+              </div>
+              <div class="forecast-degrees">
+                <span id="max-temp-three">+22</span>
+                <hr />
+                <span id="min-temp-three">+15</span>
+              </div>
+            </div>
+
+            <div class="card-body weather-card">
+              <div class="weather-icon" id="weather-icon-four">
+                <i class="lni lni-sun"></i>
+              </div>
+              <div class="week-day"><span id="week-day-four">Fri</span>,</div>
+              <div class="forecast-date">
+                <span id="date-four">21</span>
+                <span id="month-four"> June</span>
+              </div>
+              <div class="forecast-degrees">
+                <span id="max-temp-four">+22</span>
+                <hr />
+                <span id="min-temp-four">+15</span>
+              </div>
+            </div>
+
+            <div class="card-body weather-card">
+              <div class="weather-icon" id="weather-icon-five">
+                <i class="lni lni-sun"></i>
+              </div>
+              <div class="week-day"><span id="week-day-five">Fri</span>,</div>
+              <div class="forecast-date">
+                <span id="date-five">21</span>
+                <span id="month-five"> June</span>
+              </div>
+              <div class="forecast-degrees">
+                <span id="max-temp-five">+22</span>
+                <hr />
+                <span id="min-temp-five">+15</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="link-line">
+          <a
+            href="http://github.com/Kailhart/lavender-weather-app"
+            id="github-link"
+            >Open-sourced</a
           >
-            Search
-          </button>
-
-          <button class="btn btn-outline-secondary" id="location-button">
-            <i class="uil uil-location-point"></i>
-          </button>
-        </form>
-
-        <div class="card-body col-12 row p-3">
-          <div id="city-name">Los Angeles</div>
-
-          <div class="col-4">
-            <div class="degrees-line">
-              <span id="current-degrees">19</span>°C
-            </div>
-            <div class="current-weather-info">
-              Humidity: <span id="humidity">20</span>% <br />
-              Wind: <span id="wind">5</span> m/s
-            </div>
-          </div>
-
-          <div class="col-3 weather-icon" id="current-icon">
-            <i class="lni lni-sun"></i>
-          </div>
-
-          <div class="current-time p-2 col-5">
-            <span id="current-week-day">Wed</span>
-            <span id="hours">10</span>:<span id="minutes">45</span>,
-            <span id="current-weather-description">cloudy</span>
-          </div>
+          by Kailhart
         </div>
-
-        <div class="card-group col-12">
-          <div class="card-body weather-card">
-            <div class="weather-icon" id="weather-icon-one">
-              <i class="lni lni-sun"></i>
-            </div>
-            <div class="week-day"><span id="week-day-one">Fri</span>,</div>
-            <div class="forecast-date">
-              <span id="date-one">21</span> <span id="month-one"> June</span>
-            </div>
-            <div class="forecast-degrees">
-              <span id="max-temp-one">+22</span>
-              <hr />
-              <span id="min-temp-one">+15</span>
-            </div>
-          </div>
-
-          <div class="card-body weather-card">
-            <div class="weather-icon" id="weather-icon-two">
-              <i class="lni lni-sun"></i>
-            </div>
-            <div class="week-day"><span id="week-day-two">Fri</span>,</div>
-            <div class="forecast-date">
-              <span id="date-two">21</span> <span id="month-two"> June</span>
-            </div>
-            <div class="forecast-degrees">
-              <span id="max-temp-two">+22</span>
-              <hr />
-              <span id="min-temp-two">+15</span>
-            </div>
-          </div>
-
-          <div class="card-body weather-card">
-            <div class="weather-icon" id="weather-icon-three">
-              <i class="lni lni-sun"></i>
-            </div>
-            <div class="week-day"><span id="week-day-three">Fri</span>,</div>
-            <div class="forecast-date">
-              <span id="date-three">21</span>
-              <span id="month-three"> June</span>
-            </div>
-            <div class="forecast-degrees">
-              <span id="max-temp-three">+22</span>
-              <hr />
-              <span id="min-temp-three">+15</span>
-            </div>
-          </div>
-
-          <div class="card-body weather-card">
-            <div class="weather-icon" id="weather-icon-four">
-              <i class="lni lni-sun"></i>
-            </div>
-            <div class="week-day"><span id="week-day-four">Fri</span>,</div>
-            <div class="forecast-date">
-              <span id="date-four">21</span> <span id="month-four"> June</span>
-            </div>
-            <div class="forecast-degrees">
-              <span id="max-temp-four">+22</span>
-              <hr />
-              <span id="min-temp-four">+15</span>
-            </div>
-          </div>
-
-          <div class="card-body weather-card">
-            <div class="weather-icon" id="weather-icon-five">
-              <i class="lni lni-sun"></i>
-            </div>
-            <div class="week-day"><span id="week-day-five">Fri</span>,</div>
-            <div class="forecast-date">
-              <span id="date-five">21</span> <span id="month-five"> June</span>
-            </div>
-            <div class="forecast-degrees">
-              <span id="max-temp-five">+22</span>
-              <hr />
-              <span id="min-temp-five">+15</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="link-line">
-        <a
-          href="http://github.com/Kailhart/lavender-weather-app"
-          id="github-link"
-          >Open-sourced</a
-        >
-        by Kailhart
       </div>
     </div>
     <script src="src/scrypt.js"></script>
