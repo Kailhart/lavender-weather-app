@@ -45,3 +45,33 @@ function displayCurrentWeather(response) {
 let currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=Kyiv&appid=${apiKey}&units=metric`;
 
 axios.get(currentWeatherUrl).then(displayCurrentWeather);
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = ``;
+
+  let days = [1, 2, 3, 4, 5];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="card-body weather-card">
+              <div class="weather-icon"">
+                <i class="lni lni-sun"></i>
+              </div>
+              <div class="week-day"><span class = "forecast-week-day">Fri</span>,</div>
+              <div class="forecast-date">
+                <span class="forecast-day">21</span> <span class="forecast-month"> June</span>
+              </div>
+              <div class="forecast-degrees">
+                <span class="max-temp">+22</span>
+                <hr />
+                <span class="min-temp">+15</span>
+              </div>
+            </div>`;
+  });
+
+  forecastElement.innerHTML = forecastHTML;
+}
+
+displayForecast();
